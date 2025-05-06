@@ -25,6 +25,10 @@ public class UserDTO {
     private String displayName;
 
     @NotNull
+    @Size(max = 50 )
+    private String email;
+
+    @NotNull
     @Size(min = 6)
     @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).*$")
     private String password;
@@ -34,6 +38,7 @@ public class UserDTO {
         this.displayName = user.getDisplayName();
         this.username = user.getUsername();
         this.password = user.getPassword();
+        this.email = user.getEmail();
     }
 
 }

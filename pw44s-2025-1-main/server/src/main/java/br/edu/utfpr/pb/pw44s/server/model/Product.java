@@ -3,6 +3,7 @@ package br.edu.utfpr.pb.pw44s.server.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.lang.reflect.Array;
 import java.math.BigDecimal;
 
 @Entity
@@ -20,10 +21,15 @@ public class Product {
     private String name;
     
     private String description;
-    
+
     private BigDecimal price;
     
     @ManyToOne
     @JoinColumn(name = "category_id", referencedColumnName = "id")
     private Category category;
+
+    private String[] sizes;
+
+    private String[] colors;
+
 }

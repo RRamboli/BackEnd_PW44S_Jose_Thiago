@@ -20,7 +20,8 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 public class User implements UserDetails {
-    
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -32,6 +33,10 @@ public class User implements UserDetails {
     @NotNull(message = "O campo 'username' não pode ser nulo.")
     @Size(min = 4)
     private String username;
+
+    @NotNull(message = "O campo 'Email' não pode ser nulo.")
+    @Size(max = 50 )
+    private String email;
 
     @NotNull
     @Size(min = 6)

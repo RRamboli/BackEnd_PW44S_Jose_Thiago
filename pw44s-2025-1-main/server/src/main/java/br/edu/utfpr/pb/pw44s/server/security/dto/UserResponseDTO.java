@@ -14,11 +14,13 @@ public class UserResponseDTO {
 
     private String displayName;
     private String username;
+    private String email;
     private Set<AuthorityResponseDTO> authorities;
 
     public UserResponseDTO(User user) {
         this.displayName = user.getDisplayName();
         this.username = user.getUsername();
+        this.email = user.getEmail();
         this.authorities = new HashSet<>();
         for (GrantedAuthority authority: user.getAuthorities()) {
             authorities.add( new AuthorityResponseDTO(authority.getAuthority()) );
