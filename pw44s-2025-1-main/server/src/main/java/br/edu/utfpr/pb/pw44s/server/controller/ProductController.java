@@ -1,11 +1,16 @@
 package br.edu.utfpr.pb.pw44s.server.controller;
 
 import br.edu.utfpr.pb.pw44s.server.dto.ProductDTO;
+import br.edu.utfpr.pb.pw44s.server.model.Category;
 import br.edu.utfpr.pb.pw44s.server.model.Product;
 import br.edu.utfpr.pb.pw44s.server.service.ICrudService;
 import br.edu.utfpr.pb.pw44s.server.service.IProductService;
 import org.modelmapper.ModelMapper;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 @RestController

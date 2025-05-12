@@ -28,8 +28,9 @@ public class Product {
     @JoinColumn(name = "category_id", referencedColumnName = "id")
     private Category category;
 
-    private String[] sizes;
+    private String sizes;
 
-    private String[] colors;
+    private String colors;
 
+    private String image;
 }
